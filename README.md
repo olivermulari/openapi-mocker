@@ -52,6 +52,7 @@ describe("Test example api", () => {
     const expected = {}; // here you should have some kind of expected result.
     expect(res).toEqual(expected);
   });
+});
 ```
 
 ## not yet supported
