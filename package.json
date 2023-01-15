@@ -22,14 +22,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/olivermulari/openapi-mocker.git"
+    "url": "git+https://github.com/olivermulari/openapi-response-mocker.git"
   },
   "author": "Oliver Mulari",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/olivermulari/openapi-mocker/issues"
+    "url": "https://github.com/olivermulari/openapi-response-mocker/issues"
   },
-  "homepage": "https://github.com/olivermulari/openapi-mocker#readme",
+  "homepage": "https://github.com/olivermulari/openapi-response-mocker#readme",
   "devDependencies": {
     "@types/jest": "^29.2.5",
     "@typescript-eslint/eslint-plugin": "^5.48.1",
