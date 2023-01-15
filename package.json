@@ -18,7 +18,7 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "publish": "npm run build && npm publish"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
