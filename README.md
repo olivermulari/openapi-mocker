@@ -12,7 +12,7 @@ OpenAPIMocker is ment to be used with the library [Mock Service Worker (MSW)](ht
 import { rest } from "msw";
 import { enableFetchMocks } from "jest-fetch-mock";
 import { setupServer, SetupServerApi } from "msw/node";
-import OpenAPIMocker, { Document } from "../src/index";
+import OpenAPIMocker, { Document } from "openapi-response-mocker";
 
 // only json supported
 import exampleApiSpec from "./api-with-examples.json";
