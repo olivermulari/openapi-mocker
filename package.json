@@ -1,6 +1,6 @@
 {
   "name": "openapi-response-mocker",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "An OpenAPI mocker that is initialised with OpenAPI specification document.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

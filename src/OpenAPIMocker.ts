@@ -82,9 +82,10 @@ export class OpenAPIMocker<D extends Document = Document> {
 
   constructor(params: OpenAPIMockerOptions<D>) {
     this.definition = params.definition;
-    this.validateRequestBody = params?.validateRequestBody
-      ? params.validateRequestBody
-      : true;
+    this.validateRequestBody =
+      typeof params?.validateRequestBody === "boolean"
+        ? params.validateRequestBody
+        : true;
     this.operations = [];
   }
 
