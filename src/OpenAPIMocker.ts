@@ -66,6 +66,7 @@ export interface Operation {
 
 export interface OpenAPIMockerOptions<D> {
   definition?: D;
+  validateRequestBody?: boolean;
 }
 
 /**
@@ -76,10 +77,14 @@ export interface OpenAPIMockerOptions<D> {
  */
 export class OpenAPIMocker<D extends Document = Document> {
   definition?: D;
+  validateRequestBody: boolean;
   operations: Operation[];
 
   constructor(params: OpenAPIMockerOptions<D>) {
     this.definition = params.definition;
+    this.validateRequestBody = params?.validateRequestBody
+      ? params.validateRequestBody
+      : true;
     this.operations = [];
   }
 
@@ -315,7 +320,7 @@ export class OpenAPIMocker<D extends Document = Document> {
     }
 
     // validate body
-    if (operation.requestBody) {
+    if (operation.requestBody && this.validateRequestBody) {
       const requestBody: object = await req.json();
       const isValidRequestBody = this.validatePostRequestBody(
         requestBody,
