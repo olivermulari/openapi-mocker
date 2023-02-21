@@ -186,7 +186,7 @@ export class OpenAPIMocker<D extends Document = Document> {
     } else if (val.anyOf) {
       val = val.anyOf[0];
     }
-    return value;
+    return val;
   }
 
   /**
@@ -313,6 +313,7 @@ export class OpenAPIMocker<D extends Document = Document> {
     const path = req.params["0"] as string;
 
     const operation = this.getOperationForPathAndMethod("/" + path, method);
+
     const mock = operation?.mockResponseSuccess;
 
     // not found
